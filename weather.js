@@ -1,6 +1,7 @@
 #!/use/bin/env node
 import { getArgs } from "./helper/args.js";
 import { printError, printSuccess, printHelp } from "./services/log.service.js";
+import { saveKayValue } from "./services/storage..service.js";
 
 const initCLI = () => {
     const args = getArgs(process.argv);
@@ -17,7 +18,7 @@ const initCLI = () => {
 
     // Save token
     if(args.t){
-        
+        saveKayValue('token', args.t)
     }
 
 
