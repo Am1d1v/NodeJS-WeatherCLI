@@ -5,7 +5,7 @@ import {writeFileSync, writeFile, promises} from 'fs';
 const filePath = join(homedir(), 'weather-data.json');
 
 const saveKayValue = async (key, value) => {
-    const data = {};
+    let data = {};
 
     if(await isExist(filePath)){
         const file = await promises.readFile(filePath);
